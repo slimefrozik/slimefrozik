@@ -41,7 +41,8 @@
   </defs>
 
   <style>
-    /* Main body squish & bounce */
+    <![CDATA[
+    /* Main body squish and bounce */
     @keyframes slimeJump {
       0%, 100% {
         transform: translateY(0px) scale(1, 1);
@@ -201,6 +202,7 @@
     .output { fill: #8b949e; }
     .accent { fill: #79c0ff; font-weight: 600; }
     .status-ok { fill: #7ee787; font-weight: 600; }
+    ]]>
   </style>
 
   <!-- Terminal Window Container -->
@@ -269,7 +271,7 @@
       <!-- 1. Outer Translucent Jelly Cube (Main Body) -->
       <rect x="6" y="18" width="80" height="72" rx="20" fill="url(#slimeOuter)" stroke="#1a6d2b" stroke-width="2.5"/>
 
-      <!-- 2. Jelly Rim Highlight (Top & Inner Glow) -->
+      <!-- 2. Jelly Rim Highlight (Top and Inner Glow) -->
       <rect x="9" y="21" width="74" height="66" rx="17" fill="none" stroke="#7ee787" stroke-width="1.8" opacity="0.45"/>
 
       <!-- 3. Bottom Dark Ambient Shadow Inside Gel -->

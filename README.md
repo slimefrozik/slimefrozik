@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/header.svg?v=2" width="100%" alt="slimefrozik terminal" />
+<img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/header.svg?v=3" width="100%" alt="slimefrozik terminal" />
 
 <br/>
 

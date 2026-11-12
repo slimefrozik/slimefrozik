@@ -132,7 +132,7 @@
       <tspan class="cmd">vk-music-saver</tspan> <tspan fill="#79c0ff">--active</tspan>
     </text>
     <text x="25" y="199">
-      <tspan class="status-ok">[✓] EXTENSION READY</tspan>
+      <tspan class="status-ok">[+] EXTENSION READY</tspan>
       <tspan class="output"> — downloading high-bitrate audio</tspan>
       <tspan class="cursor"> █</tspan>
     </text>

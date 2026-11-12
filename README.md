@@ -4,13 +4,13 @@
 
 <br/>
 
-> 💡 *“If it works, don't touch it. If it doesn't, we vibecode until it does.”*
+> ♠ *“If it works, don't touch it. If it doesn't, we vibecode until it does.”*
 
 </div>
 
 ---
 
-### 🛠 Projects & Tools
+### ♠ Projects & Tools
 
 | Project | Type | Description |
 | :--- | :--- | :--- |
@@ -18,16 +18,16 @@
 
 ---
 
-### 🎮 What I Tinker With
+### ♣ What I Tinker With
 
-- **Browser Extensions & Web Tools**: Audio stream extraction, clean UI injection, automating mundane web tasks.
-- **Game Modding & Mechanics**: Minecraft server plugins, Terraria mods, and game prototypes.
-- **Vibecoding**: Prompting modern LLMs to craft scripts, utilities, and tools for everyday use.
++ **Browser Extensions & Web Tools**: Audio stream extraction, clean UI injection, automating mundane web tasks.
++ **Game Modding & Mechanics**: Minecraft server plugins, Terraria mods, and game prototypes.
++ **Vibecoding**: Prompting modern LLMs to craft scripts, utilities, and tools for everyday use.
 
 ---
 
 <details>
-  <summary>🕹️ <b>Behind the scenes</b></summary>
+  <summary>♥ <b>Behind the scenes</b></summary>
   <br/>
 
 ```yaml
@@ -42,5 +42,5 @@ rule_of_thumb: "Code is just a tool to solve problems — no matter how it was w
 <br/>
 
 <div align="center">
-  <sub>slimefrozik &bull; Just building things that work</sub>
+  <sub>slimefrozik + just building things that work</sub>
 </div>

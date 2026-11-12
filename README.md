@@ -1,14 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/slime.gif" width="130" alt="slimefrozik" />
-
-# slimefrozik
-
-> ♠ *“If it works, don't touch it. If it doesn't, we vibecode until it does.”*
-
-```text
-Go  +  Java (PaperMC)  +  TypeScript  +  WebExtensions  +  Godot
-```
+<img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/header.svg?v=4" width="100%" alt="slimefrozik terminal" />
 
 </div>
 

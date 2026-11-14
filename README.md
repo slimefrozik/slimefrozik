@@ -41,6 +41,12 @@ rule_of_thumb: "Code is just a tool to solve problems — no matter how it was w
 </details>
 
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/slimefrozik/slimefrozik/output/github-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/slimefrozik/slimefrozik/output/github-snake.svg">
+  <img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/output/github-snake-dark.svg" width="100%" alt="Slime snake eating GitHub contributions" />
+</picture>
+
+<picture>
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/footer-light.svg?v=8">
   <img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/footer.svg?v=8" width="100%" alt="slimefrozik + just building things that work" />
 </picture>

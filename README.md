@@ -1,23 +1,29 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/header.svg?v=5" width="100%" alt="slimefrozik terminal" />
+<img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/header.svg?v=6" width="100%" alt="slimefrozik terminal" />
 
 </div>
 
-<img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/divider-projects.svg?v=5" width="100%" alt="Projects & Tools" />
+---
 
-<a href="https://github.com/slimefrozik/VKMusicSaver">
-  <img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/project-card.svg?v=5" width="100%" alt="VKMusicSaver — Firefox extension: clean, lightweight, high-bitrate music from VK without ads, suspicious extensions, or bloated converters. AMO-compliant." />
-</a>
+### ♠ Projects & Tools
 
-<img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/divider-tinker.svg?v=5" width="100%" alt="What I tinker with" />
+| Project | Type | Description |
+| :--- | :--- | :--- |
+| [**VKMusicSaver**](https://github.com/slimefrozik/VKMusicSaver) | `Firefox Extension` | Clean, lightweight Firefox extension to download high-bitrate music directly from VK without ads, suspicious extensions, or bloated converters. AMO-compliant. |
 
-<img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/tinker.svg?v=5" width="100%" alt="Browser extensions & web tools (audio stream extraction, clean UI injection, automating mundane web tasks). Game modding & mechanics (Minecraft server plugins, Terraria mods, game prototypes). Vibecoding (prompting modern LLMs to craft scripts, utilities and tools for everyday use)." />
+---
 
-<img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/divider-behind.svg?v=5" width="100%" alt="Behind the scenes" />
+### ♣ What I Tinker With
+
++ **Browser Extensions & Web Tools**: Audio stream extraction, clean UI injection, automating mundane web tasks.
++ **Game Modding & Mechanics**: Minecraft server plugins, Terraria mods, and game prototypes.
++ **Vibecoding**: Prompting modern LLMs to craft scripts, utilities, and tools for everyday use.
+
+---
 
 <details>
-  <summary>♥ <b>Open the config</b></summary>
+  <summary>♥ <b>Behind the scenes</b></summary>
   <br/>
 
 ```yaml
@@ -29,4 +35,8 @@ rule_of_thumb: "Code is just a tool to solve problems — no matter how it was w
 
 </details>
 
-<img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/footer.svg?v=5" width="100%" alt="slimefrozik + just building things that work" />
+<br/>
+
+<div align="center">
+  <sub>slimefrozik + just building things that work</sub>
+</div>

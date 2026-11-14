@@ -8,12 +8,18 @@
 .pop{transform-box:fill-box;transform-origin:50% 50%;animation:pop 2s ease-in-out infinite}
 .blink{animation:bl 1s infinite}
 .tw{transform-box:fill-box;transform-origin:50% 50%;animation:tw 2.4s ease-in-out infinite}
+
+.dp{transform-box:fill-box;transform-origin:50% 0%;animation:dripS 5s ease-in-out infinite}
+.dd{animation:dropF 5s ease-in infinite;opacity:0}
+@keyframes dripS{0%,100%{transform:scaleY(.6)}55%{transform:scaleY(1.12)}}
+@keyframes dropF{0%,52%{opacity:0;transform:translateY(0)}58%{opacity:.9}100%{opacity:0;transform:translateY(26px)}}
+
 ]]></style>
 <g transform="translate(9,3)">
   <rect width="288" height="174" rx="16" fill="#0d1117" stroke="#30363d"/>
-  <rect x="26" y="0" width="56" height="3" rx="1.5" fill="#79c0ff"/>
+  <rect x="20" y="0" width="130" height="5" rx="2.5" fill="#79c0ff"/><rect x="26" y="1" width="118" height="1.5" rx=".75" fill="#fff" opacity=".5"/><g class="dp" style="animation-delay:-0.00s"><rect x="41.0" y="1" width="6.0" height="12" rx="3.0" fill="#79c0ff"/><circle cx="44" cy="12" r="4.6" fill="#79c0ff"/><rect x="42.2" y="4" width="1.7" height="7" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-0.00s" cx="44" cy="21" r="2.3" fill="#79c0ff"/><g class="dp" style="animation-delay:-1.37s"><rect x="83.0" y="1" width="6.0" height="20" rx="3.0" fill="#79c0ff"/><circle cx="86" cy="20" r="4.6" fill="#79c0ff"/><rect x="84.2" y="4" width="1.7" height="15" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-1.37s" cx="86" cy="29" r="2.3" fill="#79c0ff"/><g class="dp" style="animation-delay:-2.74s"><rect x="123.0" y="1" width="6.0" height="14" rx="3.0" fill="#79c0ff"/><circle cx="126" cy="14" r="4.6" fill="#79c0ff"/><rect x="124.2" y="4" width="1.7" height="9" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-2.74s" cx="126" cy="23" r="2.3" fill="#79c0ff"/>
   <rect width="288" height="174" rx="16" fill="#79c0ff" fill-opacity=".035"/>
-  <g transform="translate(26,26)"><g class="fl"><rect x="0" y="6" width="50" height="38" rx="7" fill="none" stroke="#79c0ff" stroke-width="2.4"/>
+  <g transform="translate(26,33)"><g class="fl"><rect x="0" y="6" width="50" height="38" rx="7" fill="none" stroke="#79c0ff" stroke-width="2.4"/>
       <line x1="0" y1="17" x2="50" y2="17" stroke="#79c0ff" stroke-width="2.4"/>
       <circle cx="8" cy="11.5" r="1.8" fill="#79c0ff"/><circle cx="15" cy="11.5" r="1.8" fill="#79c0ff"/>
       <rect x="30" y="26" width="12" height="12" rx="3" fill="#56d364" class="pop"/>
@@ -24,9 +30,9 @@
 </g>
 <g transform="translate(306,3)">
   <rect width="288" height="174" rx="16" fill="#0d1117" stroke="#30363d"/>
-  <rect x="26" y="0" width="56" height="3" rx="1.5" fill="#56d364"/>
+  <rect x="20" y="0" width="130" height="5" rx="2.5" fill="#56d364"/><rect x="26" y="1" width="118" height="1.5" rx=".75" fill="#fff" opacity=".5"/><g class="dp" style="animation-delay:-0.90s"><rect x="41.0" y="1" width="6.0" height="12" rx="3.0" fill="#56d364"/><circle cx="44" cy="12" r="4.6" fill="#56d364"/><rect x="42.2" y="4" width="1.7" height="7" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-0.90s" cx="44" cy="21" r="2.3" fill="#56d364"/><g class="dp" style="animation-delay:-2.27s"><rect x="83.0" y="1" width="6.0" height="20" rx="3.0" fill="#56d364"/><circle cx="86" cy="20" r="4.6" fill="#56d364"/><rect x="84.2" y="4" width="1.7" height="15" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-2.27s" cx="86" cy="29" r="2.3" fill="#56d364"/><g class="dp" style="animation-delay:-3.64s"><rect x="123.0" y="1" width="6.0" height="14" rx="3.0" fill="#56d364"/><circle cx="126" cy="14" r="4.6" fill="#56d364"/><rect x="124.2" y="4" width="1.7" height="9" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-3.64s" cx="126" cy="23" r="2.3" fill="#56d364"/>
   <rect width="288" height="174" rx="16" fill="#56d364" fill-opacity=".035"/>
-  <g transform="translate(26,26)"><g class="fl" style="animation-delay:-1s"><polygon points="25,2 49,15 25,28 1,15" fill="#7ee787"/>
+  <g transform="translate(26,33)"><g class="fl" style="animation-delay:-1s"><polygon points="25,2 49,15 25,28 1,15" fill="#7ee787"/>
       <polygon points="1,15 25,28 25,54 1,41" fill="#2ea043"/><polygon points="49,15 25,28 25,54 49,41" fill="#196c2e"/>
       <polygon points="25,2 49,15 25,28 1,15" fill="none" stroke="#b6ffc4" stroke-opacity=".6"/>
       <rect x="9" y="30" width="6" height="6" fill="#0d3f1a" opacity=".55" transform="skewY(30) translate(0,-4)"/></g></g>
@@ -36,9 +42,9 @@
 </g>
 <g transform="translate(603,3)">
   <rect width="288" height="174" rx="16" fill="#0d1117" stroke="#30363d"/>
-  <rect x="26" y="0" width="56" height="3" rx="1.5" fill="#d2a8ff"/>
+  <rect x="20" y="0" width="130" height="5" rx="2.5" fill="#d2a8ff"/><rect x="26" y="1" width="118" height="1.5" rx=".75" fill="#fff" opacity=".5"/><g class="dp" style="animation-delay:-1.80s"><rect x="41.0" y="1" width="6.0" height="12" rx="3.0" fill="#d2a8ff"/><circle cx="44" cy="12" r="4.6" fill="#d2a8ff"/><rect x="42.2" y="4" width="1.7" height="7" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-1.80s" cx="44" cy="21" r="2.3" fill="#d2a8ff"/><g class="dp" style="animation-delay:-3.17s"><rect x="83.0" y="1" width="6.0" height="20" rx="3.0" fill="#d2a8ff"/><circle cx="86" cy="20" r="4.6" fill="#d2a8ff"/><rect x="84.2" y="4" width="1.7" height="15" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-3.17s" cx="86" cy="29" r="2.3" fill="#d2a8ff"/><g class="dp" style="animation-delay:-4.54s"><rect x="123.0" y="1" width="6.0" height="14" rx="3.0" fill="#d2a8ff"/><circle cx="126" cy="14" r="4.6" fill="#d2a8ff"/><rect x="124.2" y="4" width="1.7" height="9" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-4.54s" cx="126" cy="23" r="2.3" fill="#d2a8ff"/>
   <rect width="288" height="174" rx="16" fill="#d2a8ff" fill-opacity=".035"/>
-  <g transform="translate(26,26)"><g class="fl" style="animation-delay:-2s"><rect x="0" y="6" width="50" height="40" rx="10" fill="none" stroke="#d2a8ff" stroke-width="2.4"/>
+  <g transform="translate(26,33)"><g class="fl" style="animation-delay:-2s"><rect x="0" y="6" width="50" height="40" rx="10" fill="none" stroke="#d2a8ff" stroke-width="2.4"/>
       <path d="M12 20 L22 27 L12 34" stroke="#d2a8ff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
       <line x1="26" y1="35" x2="38" y2="35" stroke="#d2a8ff" stroke-width="3" stroke-linecap="round" class="blink"/>
       <path class="tw" d="M46 -2 Q47.5 5.5 55 7 Q47.5 8.5 46 16 Q44.5 8.5 37 7 Q44.5 5.5 46 -2Z" fill="#ffa657"/></g></g>

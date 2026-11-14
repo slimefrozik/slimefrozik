@@ -1,11 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 190" width="100%" height="190" role="img" aria-label="VKMusicSaver — Firefox extension for downloading high-bitrate music from VK">
 <defs>
 
-  <linearGradient id="jelly" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9ffe3"/><stop offset=".42" stop-color="#6aeaa8"/><stop offset="1" stop-color="#22a96c"/></linearGradient>
-  <radialGradient id="sfloor" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#6aeaa8" stop-opacity=".55"/><stop offset=".7" stop-color="#238636" stop-opacity=".12"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+  <linearGradient id="jelly" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d6ffea"/><stop offset=".38" stop-color="#6aeaa8"/><stop offset="1" stop-color="#1c9a62"/></linearGradient>
   <radialGradient id="sbub" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".5" stop-color="#d4ffe8" stop-opacity=".35"/><stop offset="1" stop-color="#6aeaa8" stop-opacity=".1"/></radialGradient>
-  <clipPath id="jellyClip"><rect x="8" y="16" width="104" height="92" rx="32"/></clipPath>
 
+  <radialGradient id="orbG" cx="35%" cy="30%" r="75%"><stop offset="0" stop-color="#e2fff0"/><stop offset=".42" stop-color="#5fe3a1"/><stop offset="1" stop-color="#17814f"/></radialGradient>
   <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3eb856"/><stop offset=".55" stop-color="#30363d"/><stop offset="1" stop-color="#79c0ff"/></linearGradient>
   <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#12301b"/><stop offset="1" stop-color="#0a1a10"/></linearGradient>
   <linearGradient id="sheen" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#9bfab0" stop-opacity=".09"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
@@ -19,23 +18,13 @@
 .sweep{animation:sweep 6s ease-in-out infinite}
 .gem{animation:glow 2.4s ease-in-out infinite}
 
-.look{animation:look 6s ease-in-out infinite}
-.mouth{transform-box:fill-box;transform-origin:50% 0%;animation:mouth 2.8s ease-in-out infinite}
-.brow{animation:brow 4.2s ease-in-out infinite}
-.sb{animation:sbub 5s ease-in infinite;opacity:0}
-.bgb{animation:bgb 7s ease-in infinite;opacity:0}
-.eqb{transform-box:fill-box;transform-origin:50% 100%;animation:eqb 1s ease-in-out infinite}
-@keyframes eqb{0%,100%{transform:scaleY(.2)}50%{transform:scaleY(1)}}
-@keyframes look{0%,28%,100%{transform:translateX(0)}38%,56%{transform:translateX(-3px)}68%,88%{transform:translateX(3px)}}
-@keyframes mouth{0%,100%{transform:scale(1,1)}12%,28%{transform:scale(.86,1.22)}42%{transform:scale(1.18,.78)}}
-@keyframes brow{0%,40%,100%{transform:translateY(0)}48%,60%{transform:translateY(-2.5px)}}
-@keyframes sbub{0%{transform:translateY(0);opacity:0}20%{opacity:.85}100%{transform:translateY(-38px);opacity:0}}
-@keyframes bgb{0%{transform:translateY(0);opacity:0}15%{opacity:.55}100%{transform:translateY(-130px);opacity:0}}
+.dp{transform-box:fill-box;transform-origin:50% 0%;animation:dripS 5s ease-in-out infinite}
+.dd{animation:dropF 5s ease-in infinite;opacity:0}
+@keyframes dripS{0%,100%{transform:scaleY(.6)}55%{transform:scaleY(1.12)}}
+@keyframes dropF{0%,52%{opacity:0;transform:translateY(0)}58%{opacity:.9}100%{opacity:0;transform:translateY(26px)}}
 
-.body{transform-box:fill-box;transform-origin:50% 100%;animation:cjump 1.2s ease-in-out infinite}
-.eyes{transform-box:fill-box;transform-origin:50% 50%;animation:blinkEye 4.2s infinite}
-@keyframes cjump{0%,100%{transform:translateY(0) scale(1.06,.94)}35%{transform:translateY(-14px) scale(.96,1.05)}70%{transform:translateY(0) scale(1.08,.92)}}
-@keyframes blinkEye{0%,46%,50%,96%,100%{transform:scaleY(1)}48%,98%{transform:scaleY(.08)}}
+@keyframes orbBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.orb{animation:orbBob 3.4s ease-in-out infinite}
 ]]></style>
 <rect x="2" y="2" width="896" height="186" rx="16" fill="#0d1117" stroke="url(#edge)" stroke-width="1.5"/>
 <g clip-path="url(#cardClip)"><rect class="sweep" x="0" y="0" width="260" height="190" fill="url(#sheen)" transform="skewX(-18)"/></g>
@@ -44,25 +33,13 @@
 <text x="184" y="62" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="28" font-weight="800" fill="#f0f6fc">VKMusicSaver</text>
 <g class="gem"><rect x="760" y="34" width="112" height="26" rx="13" fill="#ffa657" fill-opacity=".12" stroke="#ffa657" stroke-opacity=".6"/>
 <text x="816" y="51.5" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" font-weight="700" fill="#ffa657">★ current gem</text></g>
-<ellipse cx="802" cy="131" rx="26" ry="4.5" fill="#000" opacity=".45"/>
-<g transform="translate(772,70) scale(.5)">
-<g class="body">
-  <path d="M12 54 C10 -8 110 -8 108 54" fill="none" stroke="#1b2a3a" stroke-width="7" stroke-linecap="round"/><path d="M12 54 C10 -8 110 -8 108 54" fill="none" stroke="#7ee787" stroke-opacity=".75" stroke-width="1.6" stroke-linecap="round" transform="translate(0,-1.5)"/>
-  <rect x="8" y="16" width="104" height="92" rx="32" fill="url(#jelly)" stroke="#8ff5c0" stroke-width="2.6"/>
-  <g clip-path="url(#jellyClip)">
-    <path d="M8 74 C34 52 62 84 112 44 V110 H8Z" fill="#17986a" opacity=".3"/>
-    <ellipse cx="60" cy="106" rx="46" ry="13" fill="#d8ffec" opacity=".38"/>
-    <g class="sb" style="animation-delay:0s"><circle cx="28" cy="92" r="5" fill="url(#sbub)" stroke="#fff" stroke-opacity=".55" stroke-width=".8"/><circle cx="26.5" cy="90.2" r="1.4" fill="#fff"/></g><g class="sb" style="animation-delay:1.6s"><circle cx="88" cy="88" r="4" fill="url(#sbub)" stroke="#fff" stroke-opacity=".55" stroke-width=".8"/><circle cx="86.8" cy="86.6" r="1.1" fill="#fff"/></g><g class="sb" style="animation-delay:3.1s"><circle cx="70" cy="98" r="3" fill="url(#sbub)" stroke="#fff" stroke-opacity=".55" stroke-width=".8"/><circle cx="69.1" cy="97.0" r="0.8" fill="#fff"/></g><g class="sb" style="animation-delay:2.2s"><circle cx="40" cy="76" r="2.6" fill="url(#sbub)" stroke="#fff" stroke-opacity=".55" stroke-width=".8"/><circle cx="39.2" cy="75.1" r="0.7" fill="#fff"/></g><g class="sb" style="animation-delay:0.8s"><circle cx="96" cy="64" r="3.2" fill="url(#sbub)" stroke="#fff" stroke-opacity=".55" stroke-width=".8"/><circle cx="95.0" cy="62.9" r="0.9" fill="#fff"/></g>
-  </g>
-  <rect x="12" y="20" width="96" height="84" rx="29" fill="none" stroke="#eafff4" stroke-opacity=".5" stroke-width="1.6"/>
-  <path d="M26 28 Q60 20 94 28 Q60 34 26 28Z" fill="#fff" opacity=".72"/>
-  <path d="M20 36 l2.2 6 l6 2.2 l-6 2.2 l-2.2 6 l-2.2 -6 l-6 -2.2 l6 -2.2z" fill="#fff"/>
-  <g class="brow"><path d="M35 46 Q44 40 53 46" stroke="#0f4a35" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M67 46 Q76 40 85 46" stroke="#0f4a35" stroke-width="2.6" fill="none" stroke-linecap="round"/></g>
-  <g class="look"><g class="eyes"><ellipse cx="44" cy="62" rx="9.5" ry="11.8" fill="#0a2a22"/><ellipse cx="44" cy="62" rx="9.5" ry="11.8" fill="none" stroke="#1d6b4f" stroke-width="1.2"/><circle cx="40.8" cy="56.5" r="3.8" fill="#fff"/><circle cx="47.4" cy="67.5" r="1.9" fill="#fff" opacity=".85"/><path d="M47 58 l1 2.6 l2.6 1 l-2.6 1 l-1 2.6 l-1 -2.6 l-2.6 -1 l2.6 -1z" fill="#b6ffe0" opacity=".9" transform="scale(.7) translate(20.2,24.9)"/><ellipse cx="76" cy="62" rx="9.5" ry="11.8" fill="#0a2a22"/><ellipse cx="76" cy="62" rx="9.5" ry="11.8" fill="none" stroke="#1d6b4f" stroke-width="1.2"/><circle cx="72.8" cy="56.5" r="3.8" fill="#fff"/><circle cx="79.4" cy="67.5" r="1.9" fill="#fff" opacity=".85"/><path d="M79 58 l1 2.6 l2.6 1 l-2.6 1 l-1 2.6 l-1 -2.6 l-2.6 -1 l2.6 -1z" fill="#b6ffe0" opacity=".9" transform="scale(.7) translate(34.0,24.9)"/></g></g>
-  <ellipse cx="29" cy="79" rx="6.5" ry="3.4" fill="#ff8fa3" opacity=".65"/><ellipse cx="91" cy="79" rx="6.5" ry="3.4" fill="#ff8fa3" opacity=".65"/>
-  <g class="mouth"><path d="M49 79 Q60 82 71 79 Q69 94 60 94 Q51 94 49 79Z" fill="#0a2a22"/><ellipse cx="60" cy="89.6" rx="5.6" ry="3" fill="#ff8fa3"/></g>
-  <g class="cup"><rect x="1" y="44" width="17" height="36" rx="8.5" fill="#1b2a3a" stroke="#7ee787" stroke-width="1.8"/><rect x="5.5" y="50" width="6" height="24" rx="3" fill="#7ee787" opacity=".4"/><rect x="102" y="44" width="17" height="36" rx="8.5" fill="#1b2a3a" stroke="#7ee787" stroke-width="1.8"/><rect x="108.5" y="50" width="6" height="24" rx="3" fill="#7ee787" opacity=".4"/></g>
-</g></g>
+<ellipse cx="816" cy="140" rx="24" ry="4" fill="#3eb856" opacity=".25"/>
+<g class="orb"><circle cx="816" cy="102" r="28" fill="url(#orbG)" stroke="#8ff5c0" stroke-opacity=".6"/>
+<path d="M797 90 A22 22 0 0 1 816 80" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="3.6" stroke-linecap="round"/>
+<ellipse cx="803" cy="88" rx="8" ry="3.4" fill="#fff" opacity=".7" transform="rotate(-30 803 88)"/>
+<g transform="translate(811,108) scale(1.5)"><ellipse cx="0" cy="0" rx="4.2" ry="3.2" transform="rotate(-20)" fill="#0b3b27"/><path d="M3.6 -1.2 V-15 Q9 -12 10 -8" stroke="#0b3b27" stroke-width="2" fill="none" stroke-linecap="round"/></g>
+<circle cx="832" cy="116" r="3" fill="url(#sbub)" stroke="#fff" stroke-opacity=".6" stroke-width=".7"/><circle cx="800" cy="118" r="2" fill="url(#sbub)" stroke="#fff" stroke-opacity=".6" stroke-width=".7"/></g>
+<rect x="24" y="2" width="676" height="5" rx="2.5" fill="#3eb856"/><rect x="30" y="3" width="664" height="1.5" rx=".75" fill="#fff" opacity=".5"/><g class="dp" style="animation-delay:-1.80s"><rect x="67.0" y="3" width="6.0" height="12" rx="3.0" fill="#3eb856"/><circle cx="70" cy="14" r="4.6" fill="#3eb856"/><rect x="68.2" y="6" width="1.7" height="7" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-1.80s" cx="70" cy="23" r="2.3" fill="#3eb856"/><g class="dp" style="animation-delay:-3.17s"><rect x="137.0" y="3" width="6.0" height="20" rx="3.0" fill="#3eb856"/><circle cx="140" cy="22" r="4.6" fill="#3eb856"/><rect x="138.2" y="6" width="1.7" height="15" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-3.17s" cx="140" cy="31" r="2.3" fill="#3eb856"/><g class="dp" style="animation-delay:-4.54s"><rect x="219.0" y="3" width="6.0" height="14" rx="3.0" fill="#3eb856"/><circle cx="222" cy="16" r="4.6" fill="#3eb856"/><rect x="220.2" y="6" width="1.7" height="9" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-4.54s" cx="222" cy="25" r="2.3" fill="#3eb856"/><g class="dp" style="animation-delay:-0.91s"><rect x="307.0" y="3" width="6.0" height="24" rx="3.0" fill="#3eb856"/><circle cx="310" cy="26" r="4.6" fill="#3eb856"/><rect x="308.2" y="6" width="1.7" height="19" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-0.91s" cx="310" cy="35" r="2.3" fill="#3eb856"/><g class="dp" style="animation-delay:-2.28s"><rect x="417.0" y="3" width="6.0" height="12" rx="3.0" fill="#3eb856"/><circle cx="420" cy="14" r="4.6" fill="#3eb856"/><rect x="418.2" y="6" width="1.7" height="7" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-2.28s" cx="420" cy="23" r="2.3" fill="#3eb856"/><g class="dp" style="animation-delay:-3.65s"><rect x="502.0" y="3" width="6.0" height="18" rx="3.0" fill="#3eb856"/><circle cx="505" cy="20" r="4.6" fill="#3eb856"/><rect x="503.2" y="6" width="1.7" height="13" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-3.65s" cx="505" cy="29" r="2.3" fill="#3eb856"/><g class="dp" style="animation-delay:-0.02s"><rect x="597.0" y="3" width="6.0" height="14" rx="3.0" fill="#3eb856"/><circle cx="600" cy="16" r="4.6" fill="#3eb856"/><rect x="598.2" y="6" width="1.7" height="9" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-0.02s" cx="600" cy="25" r="2.3" fill="#3eb856"/>
 <rect x="184" y="88" width="140" height="24" rx="12" fill="#79c0ff" fill-opacity=".1" stroke="#79c0ff" stroke-opacity=".5"/><text x="254.0" y="104" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#79c0ff">Firefox Extension</text><rect x="332" y="88" width="113" height="24" rx="12" fill="#56d364" fill-opacity=".1" stroke="#56d364" stroke-opacity=".5"/><text x="388.5" y="104" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#56d364">AMO-compliant</text><rect x="453" y="88" width="66" height="24" rx="12" fill="#ffa657" fill-opacity=".1" stroke="#ffa657" stroke-opacity=".5"/><text x="486.0" y="104" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#ffa657">No ads</text><rect x="527" y="88" width="106" height="24" rx="12" fill="#d2a8ff" fill-opacity=".1" stroke="#d2a8ff" stroke-opacity=".5"/><text x="580.0" y="104" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" font-weight="600" fill="#d2a8ff">High-bitrate</text>
 <text font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#9198a1"><tspan x="184" y="136">Clean, lightweight add-on that saves music from VK in high bitrate —</tspan><tspan x="184" y="155">no ads, no suspicious extensions, no bloated converters.</tspan></text>
 <text x="872" y="174" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12.5" font-weight="600" fill="#79c0ff">github.com/slimefrozik/VKMusicSaver  →</text>

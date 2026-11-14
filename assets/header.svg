@@ -1,10 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="100%" height="280" role="img" aria-label="slimefrozik terminal">
 <defs>
 
-  <linearGradient id="jelly" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9ffe3"/><stop offset=".42" stop-color="#6aeaa8"/><stop offset="1" stop-color="#22a96c"/></linearGradient>
-  <radialGradient id="sfloor" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#6aeaa8" stop-opacity=".55"/><stop offset=".7" stop-color="#238636" stop-opacity=".12"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+  <linearGradient id="jelly" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d6ffea"/><stop offset=".38" stop-color="#6aeaa8"/><stop offset="1" stop-color="#1c9a62"/></linearGradient>
   <radialGradient id="sbub" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".5" stop-color="#d4ffe8" stop-opacity=".35"/><stop offset="1" stop-color="#6aeaa8" stop-opacity=".1"/></radialGradient>
-  <clipPath id="jellyClip"><rect x="8" y="16" width="104" height="92" rx="32"/></clipPath>
+
+
+  <filter id="goo" filterUnits="userSpaceOnUse" x="690" y="90" width="205" height="175"><feGaussianBlur in="SourceGraphic" stdDeviation="7" result="b"/><feColorMatrix in="b" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -10"/></filter>
+  <mask id="gooMask" maskUnits="userSpaceOnUse" x="690" y="90" width="205" height="175"><g filter="url(#goo)" fill="#fff">
+    <circle class="gM" cx="800" cy="180" r="44"/>
+    <ellipse class="gP" cx="800" cy="228" rx="64" ry="13"/>
+    <circle class="gA" cx="758" cy="150" r="21"/>
+    <circle class="gB" cx="848" cy="196" r="24"/>
+    <circle class="gC" cx="846" cy="142" r="13"/>
+    <circle class="gD" cx="765" cy="214" r="15"/>
+  </g></mask>
+  <linearGradient id="gelDark" x1="0" y1="0" x2="0" y2="1"><stop offset=".45" stop-color="#06301f" stop-opacity="0"/><stop offset="1" stop-color="#06301f" stop-opacity=".6"/></linearGradient>
 
   <linearGradient id="edgeG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#30363d"/><stop offset=".7" stop-color="#2f6f45"/><stop offset="1" stop-color="#3eb856"/></linearGradient>
   <linearGradient id="slimeOuter" x1="15%" y1="0%" x2="85%" y2="100%"><stop offset="0%" stop-color="#6be37b"/><stop offset="45%" stop-color="#3eb856"/><stop offset="85%" stop-color="#238636"/><stop offset="100%" stop-color="#145324"/></linearGradient>
@@ -34,11 +44,6 @@
 @keyframes p3{0%,82%{opacity:0;transform:translateY(6px)}85%{opacity:1;transform:translateY(0)}94%{opacity:1}94.01%,100%{opacity:0}}
 
 @keyframes fade{0%,90%{opacity:1}94%,99%{opacity:0}100%{opacity:1}}
-@keyframes jump{0%,100%{transform:translateY(0) scale(1,1)}12%{transform:translateY(-24px) scale(.92,1.12)}28%{transform:translateY(-28px) scale(.96,1.05)}42%{transform:translateY(0) scale(1.15,.86)}54%{transform:translateY(-6px) scale(.98,1.02)}68%{transform:translateY(0) scale(1.05,.95)}82%{transform:translateY(0) scale(1,1)}}
-@keyframes shadowPulse{0%,100%{transform:scale(1);opacity:.55}18%{transform:scale(.65);opacity:.25}42%{transform:scale(1.25);opacity:.7}54%{transform:scale(.94);opacity:.45}68%{transform:scale(1.06);opacity:.6}82%{transform:scale(1);opacity:.55}}
-@keyframes blinkEye{0%,46%,50%,96%,100%{transform:scaleY(1)}48%,98%{transform:scaleY(.08)}}
-@keyframes splashL{0%,40%{transform:translate(0,0) scale(0);opacity:0}43%{transform:translate(-14px,-8px) scale(1);opacity:.9}49%{transform:translate(-22px,2px) scale(.6);opacity:0}100%{opacity:0}}
-@keyframes splashR{0%,40%{transform:translate(0,0) scale(0);opacity:0}43%{transform:translate(14px,-8px) scale(1);opacity:.9}49%{transform:translate(22px,2px) scale(.6);opacity:0}100%{opacity:0}}
 @keyframes cursor{0%,49%{opacity:1}50%,100%{opacity:0}}
 @keyframes auraPulse{0%,100%{transform:scale(1);opacity:.8}50%{transform:scale(1.12);opacity:1}}
 @keyframes noteUp{0%{transform:translate(0,0);opacity:0}15%{opacity:.9}100%{transform:translate(10px,-62px);opacity:0}}
@@ -49,28 +54,35 @@
 .txt{animation:fade 14s infinite}
 .pill{animation-duration:14s;animation-iteration-count:infinite}
 .box{transform-box:fill-box;transform-origin:50% 50%}
-.body{transform-box:fill-box;transform-origin:50% 100%;animation:jump 2.8s cubic-bezier(.4,0,.2,1) infinite}
-.shadow{transform-box:fill-box;transform-origin:50% 50%;animation:shadowPulse 2.8s cubic-bezier(.4,0,.2,1) infinite}
-.eyes{transform-box:fill-box;transform-origin:50% 50%;animation:blinkEye 4.2s infinite}
-.dl{animation:splashL 2.8s cubic-bezier(.2,.8,.4,1) infinite}
-.dr{animation:splashR 2.8s cubic-bezier(.2,.8,.4,1) infinite}
 .cur{animation:cursor .9s infinite;fill:#56d364}
 .aura{transform-box:fill-box;transform-origin:50% 50%;animation:auraPulse 4s ease-in-out infinite}
 .note{animation:noteUp 4.2s ease-out infinite;opacity:0}
 .spark{transform-box:fill-box;transform-origin:50% 50%;animation:twinkle 2.6s ease-in-out infinite}
 
-.look{animation:look 6s ease-in-out infinite}
-.mouth{transform-box:fill-box;transform-origin:50% 0%;animation:mouth 2.8s ease-in-out infinite}
-.brow{animation:brow 4.2s ease-in-out infinite}
 .sb{animation:sbub 5s ease-in infinite;opacity:0}
 .bgb{animation:bgb 7s ease-in infinite;opacity:0}
 .eqb{transform-box:fill-box;transform-origin:50% 100%;animation:eqb 1s ease-in-out infinite}
 @keyframes eqb{0%,100%{transform:scaleY(.2)}50%{transform:scaleY(1)}}
-@keyframes look{0%,28%,100%{transform:translateX(0)}38%,56%{transform:translateX(-3px)}68%,88%{transform:translateX(3px)}}
-@keyframes mouth{0%,100%{transform:scale(1,1)}12%,28%{transform:scale(.86,1.22)}42%{transform:scale(1.18,.78)}}
-@keyframes brow{0%,40%,100%{transform:translateY(0)}48%,60%{transform:translateY(-2.5px)}}
 @keyframes sbub{0%{transform:translateY(0);opacity:0}20%{opacity:.85}100%{transform:translateY(-38px);opacity:0}}
 @keyframes bgb{0%{transform:translateY(0);opacity:0}15%{opacity:.55}100%{transform:translateY(-130px);opacity:0}}
+.gA{animation:gA 6s ease-in-out infinite}
+.gB{animation:gB 7.5s ease-in-out infinite}
+.gC{animation:gC 5s ease-in-out infinite}
+.gD{animation:gD 8s ease-in-out infinite}
+.gP{transform-box:fill-box;transform-origin:50% 50%;animation:gP 4s ease-in-out infinite}
+.gM{transform-box:fill-box;transform-origin:50% 100%;animation:gM 4.4s ease-in-out infinite}
+@keyframes gA{0%,100%{transform:translate(0,0)}50%{transform:translate(10px,10px)}}
+@keyframes gB{0%,100%{transform:translate(0,0)}50%{transform:translate(-12px,-8px)}}
+@keyframes gC{0%,100%{transform:translate(0,6px)}50%{transform:translate(4px,-30px)}}
+@keyframes gD{0%,100%{transform:translate(0,0)}50%{transform:translate(-8px,12px)}}
+@keyframes gP{0%,100%{transform:scaleX(1)}50%{transform:scaleX(1.12)}}
+@keyframes gM{0%,100%{transform:scale(1,1)}50%{transform:scale(1.035,.97)}}
+
+
+.dp{transform-box:fill-box;transform-origin:50% 0%;animation:dripS 5s ease-in-out infinite}
+.dd{animation:dropF 5s ease-in infinite;opacity:0}
+@keyframes dripS{0%,100%{transform:scaleY(.6)}55%{transform:scaleY(1.12)}}
+@keyframes dropF{0%,52%{opacity:0;transform:translateY(0)}58%{opacity:.9}100%{opacity:0;transform:translateY(26px)}}
 
 .scanline{animation:scan 6s linear infinite}
 .live{animation:live 1.8s ease-in-out infinite}
@@ -86,6 +98,7 @@
   <path d="M5 38 V17 Q5 5 17 5 H883 Q895 5 895 17 V38Z" fill="#161b22"/>
   <line x1="5" y1="38" x2="895" y2="38" stroke="#30363d"/>
 </g>
+<rect x="18" y="4" width="864" height="7" rx="3.5" fill="#3eb856"/><rect x="24" y="5" width="852" height="1.5" rx=".75" fill="#fff" opacity=".5"/><g class="dp" style="animation-delay:-0.00s"><rect x="106.0" y="5" width="8.1" height="16" rx="4.1" fill="#3eb856"/><circle cx="110" cy="20" r="6.2" fill="#3eb856"/><rect x="107.6" y="8" width="1.7" height="11" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-0.00s" cx="110" cy="29" r="2.3" fill="#3eb856"/><g class="dp" style="animation-delay:-1.37s"><rect x="163.9" y="5" width="8.1" height="26" rx="4.1" fill="#3eb856"/><circle cx="168" cy="30" r="6.2" fill="#3eb856"/><rect x="165.6" y="8" width="1.7" height="21" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-1.37s" cx="168" cy="39" r="2.3" fill="#3eb856"/><g class="dp" style="animation-delay:-2.74s"><rect x="231.9" y="5" width="8.1" height="14" rx="4.1" fill="#3eb856"/><circle cx="236" cy="18" r="6.2" fill="#3eb856"/><rect x="233.6" y="8" width="1.7" height="9" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-2.74s" cx="236" cy="27" r="2.3" fill="#3eb856"/><g class="dp" style="animation-delay:-4.11s"><rect x="295.9" y="5" width="8.1" height="22" rx="4.1" fill="#3eb856"/><circle cx="300" cy="26" r="6.2" fill="#3eb856"/><rect x="297.6" y="8" width="1.7" height="17" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-4.11s" cx="300" cy="35" r="2.3" fill="#3eb856"/><g class="dp" style="animation-delay:-0.48s"><rect x="335.9" y="5" width="8.1" height="12" rx="4.1" fill="#3eb856"/><circle cx="340" cy="16" r="6.2" fill="#3eb856"/><rect x="337.6" y="8" width="1.7" height="7" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-0.48s" cx="340" cy="25" r="2.3" fill="#3eb856"/><g class="dp" style="animation-delay:-1.85s"><rect x="556.0" y="5" width="8.1" height="18" rx="4.1" fill="#3eb856"/><circle cx="560" cy="22" r="6.2" fill="#3eb856"/><rect x="557.6" y="8" width="1.7" height="13" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-1.85s" cx="560" cy="31" r="2.3" fill="#3eb856"/><g class="dp" style="animation-delay:-3.22s"><rect x="611.0" y="5" width="8.1" height="28" rx="4.1" fill="#3eb856"/><circle cx="615" cy="32" r="6.2" fill="#3eb856"/><rect x="612.6" y="8" width="1.7" height="23" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-3.22s" cx="615" cy="41" r="2.3" fill="#3eb856"/><g class="dp" style="animation-delay:-4.59s"><rect x="664.0" y="5" width="8.1" height="14" rx="4.1" fill="#3eb856"/><circle cx="668" cy="18" r="6.2" fill="#3eb856"/><rect x="665.6" y="8" width="1.7" height="9" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-4.59s" cx="668" cy="27" r="2.3" fill="#3eb856"/>
 <circle cx="24" cy="21.5" r="5.5" fill="#ff5f56"/><circle cx="42" cy="21.5" r="5.5" fill="#ffbd2e"/><circle cx="60" cy="21.5" r="5.5" fill="#27c93f"/>
 <text x="450" y="26" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" font-weight="500" fill="#8b949e">slime@frozik:~ (zsh)</text>
 <text x="880" y="25.5" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#8b949e"><tspan class="live" fill="#56d364" font-size="10">●</tspan>  vibecoding &amp; experimenting</text>
@@ -116,28 +129,23 @@
 <g transform="translate(708,215)"><path class="spark" style="animation-delay:2s" d="M0 -9 Q1.5 -1.5 9 0 Q1.5 1.5 0 9 Q-1.5 1.5 -9 0 Q-1.5 -1.5 0 -9Z" fill="#b6ffc4" transform="scale(0.7)"/></g>
 
 <circle class="bgb" style="animation-delay:0s" cx="690" cy="255" r="4" fill="none" stroke="#7ee787" stroke-opacity=".7" stroke-width="1.2"/><circle class="bgb" style="animation-delay:1.5s" cx="730" cy="262" r="2.5" fill="none" stroke="#7ee787" stroke-opacity=".7" stroke-width="1.2"/><circle class="bgb" style="animation-delay:3s" cx="880" cy="258" r="3.5" fill="none" stroke="#7ee787" stroke-opacity=".7" stroke-width="1.2"/><circle class="bgb" style="animation-delay:4.5s" cx="850" cy="265" r="2.2" fill="none" stroke="#7ee787" stroke-opacity=".7" stroke-width="1.2"/><circle class="bgb" style="animation-delay:5.5s" cx="765" cy="260" r="3" fill="none" stroke="#7ee787" stroke-opacity=".7" stroke-width="1.2"/><circle class="bgb" style="animation-delay:2.2s" cx="700" cy="250" r="2" fill="none" stroke="#7ee787" stroke-opacity=".7" stroke-width="1.2"/>
-<g transform="translate(738,116) scale(1.22)">
-<ellipse cx="60" cy="113" rx="52" ry="11" fill="url(#sfloor)" class="shadow"/><ellipse cx="60" cy="113" rx="40" ry="6.5" fill="#000" class="shadow"/><circle cx="10" cy="108" r="3.4" fill="#6aeaa8" class="dl box"/><circle cx="110" cy="108" r="3.4" fill="#6aeaa8" class="dr box"/>
-<g class="body">
-  <path d="M12 54 C10 -8 110 -8 108 54" fill="none" stroke="#1b2a3a" stroke-width="7" stroke-linecap="round"/><path d="M12 54 C10 -8 110 -8 108 54" fill="none" stroke="#7ee787" stroke-opacity=".75" stroke-width="1.6" stroke-linecap="round" transform="translate(0,-1.5)"/>
-  <rect x="8" y="16" width="104" height="92" rx="32" fill="url(#jelly)" stroke="#8ff5c0" stroke-width="2.6"/>
-  <g clip-path="url(#jellyClip)">
-    <path d="M8 74 C34 52 62 84 112 44 V110 H8Z" fill="#17986a" opacity=".3"/>
-    <ellipse cx="60" cy="106" rx="46" ry="13" fill="#d8ffec" opacity=".38"/>
-    <g class="sb" style="animation-delay:0s"><circle cx="28" cy="92" r="5" fill="url(#sbub)" stroke="#fff" stroke-opacity=".55" stroke-width=".8"/><circle cx="26.5" cy="90.2" r="1.4" fill="#fff"/></g><g class="sb" style="animation-delay:1.6s"><circle cx="88" cy="88" r="4" fill="url(#sbub)" stroke="#fff" stroke-opacity=".55" stroke-width=".8"/><circle cx="86.8" cy="86.6" r="1.1" fill="#fff"/></g><g class="sb" style="animation-delay:3.1s"><circle cx="70" cy="98" r="3" fill="url(#sbub)" stroke="#fff" stroke-opacity=".55" stroke-width=".8"/><circle cx="69.1" cy="97.0" r="0.8" fill="#fff"/></g><g class="sb" style="animation-delay:2.2s"><circle cx="40" cy="76" r="2.6" fill="url(#sbub)" stroke="#fff" stroke-opacity=".55" stroke-width=".8"/><circle cx="39.2" cy="75.1" r="0.7" fill="#fff"/></g><g class="sb" style="animation-delay:0.8s"><circle cx="96" cy="64" r="3.2" fill="url(#sbub)" stroke="#fff" stroke-opacity=".55" stroke-width=".8"/><circle cx="95.0" cy="62.9" r="0.9" fill="#fff"/></g>
+<g>
+  <rect x="690" y="90" width="205" height="175" fill="url(#jelly)" mask="url(#gooMask)"/>
+  <rect x="690" y="90" width="205" height="175" fill="url(#gelDark)" mask="url(#gooMask)"/>
+  <g mask="url(#gooMask)">
+    <g class="sb" style="animation-delay:0s"><circle cx="812" cy="198" r="8" fill="url(#sbub)" stroke="#fff" stroke-opacity=".6" stroke-width=".9"/></g>
+    <g class="sb" style="animation-delay:1.7s"><circle cx="782" cy="206" r="5" fill="url(#sbub)" stroke="#fff" stroke-opacity=".6" stroke-width=".9"/></g>
+    <g class="sb" style="animation-delay:3.2s"><circle cx="826" cy="178" r="4" fill="url(#sbub)" stroke="#fff" stroke-opacity=".6" stroke-width=".9"/></g>
+    <g class="sb" style="animation-delay:2.4s"><circle cx="796" cy="190" r="3" fill="url(#sbub)" stroke="#fff" stroke-opacity=".6" stroke-width=".9"/></g>
   </g>
-  <rect x="12" y="20" width="96" height="84" rx="29" fill="none" stroke="#eafff4" stroke-opacity=".5" stroke-width="1.6"/>
-  <path d="M26 28 Q60 20 94 28 Q60 34 26 28Z" fill="#fff" opacity=".72"/>
-  <path d="M20 36 l2.2 6 l6 2.2 l-6 2.2 l-2.2 6 l-2.2 -6 l-6 -2.2 l6 -2.2z" fill="#fff"/>
-  <g class="brow"><path d="M35 46 Q44 40 53 46" stroke="#0f4a35" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M67 46 Q76 40 85 46" stroke="#0f4a35" stroke-width="2.6" fill="none" stroke-linecap="round"/></g>
-  <g class="look"><g class="eyes"><ellipse cx="44" cy="62" rx="9.5" ry="11.8" fill="#0a2a22"/><ellipse cx="44" cy="62" rx="9.5" ry="11.8" fill="none" stroke="#1d6b4f" stroke-width="1.2"/><circle cx="40.8" cy="56.5" r="3.8" fill="#fff"/><circle cx="47.4" cy="67.5" r="1.9" fill="#fff" opacity=".85"/><path d="M47 58 l1 2.6 l2.6 1 l-2.6 1 l-1 2.6 l-1 -2.6 l-2.6 -1 l2.6 -1z" fill="#b6ffe0" opacity=".9" transform="scale(.7) translate(20.2,24.9)"/><ellipse cx="76" cy="62" rx="9.5" ry="11.8" fill="#0a2a22"/><ellipse cx="76" cy="62" rx="9.5" ry="11.8" fill="none" stroke="#1d6b4f" stroke-width="1.2"/><circle cx="72.8" cy="56.5" r="3.8" fill="#fff"/><circle cx="79.4" cy="67.5" r="1.9" fill="#fff" opacity=".85"/><path d="M79 58 l1 2.6 l2.6 1 l-2.6 1 l-1 2.6 l-1 -2.6 l-2.6 -1 l2.6 -1z" fill="#b6ffe0" opacity=".9" transform="scale(.7) translate(34.0,24.9)"/></g></g>
-  <ellipse cx="29" cy="79" rx="6.5" ry="3.4" fill="#ff8fa3" opacity=".65"/><ellipse cx="91" cy="79" rx="6.5" ry="3.4" fill="#ff8fa3" opacity=".65"/>
-  <g class="mouth"><path d="M49 79 Q60 82 71 79 Q69 94 60 94 Q51 94 49 79Z" fill="#0a2a22"/><ellipse cx="60" cy="89.6" rx="5.6" ry="3" fill="#ff8fa3"/></g>
-  <g class="cup"><rect x="1" y="44" width="17" height="36" rx="8.5" fill="#1b2a3a" stroke="#7ee787" stroke-width="1.8"/><rect x="5.5" y="50" width="6" height="24" rx="3" fill="#7ee787" opacity=".4"/><rect x="102" y="44" width="17" height="36" rx="8.5" fill="#1b2a3a" stroke="#7ee787" stroke-width="1.8"/><rect x="108.5" y="50" width="6" height="24" rx="3" fill="#7ee787" opacity=".4"/></g>
+  <path d="M768 160 A38 38 0 0 1 800 140" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="4.5" stroke-linecap="round"/>
+  <ellipse cx="783" cy="150" rx="13" ry="5.5" fill="#fff" opacity=".75" transform="rotate(-28 783 150)"/>
+  <circle cx="768" cy="169" r="2.6" fill="#fff" opacity=".85"/>
+  <ellipse cx="752" cy="144" rx="6" ry="2.6" fill="#fff" opacity=".6" transform="rotate(-35 752 144)"/>
+  <ellipse cx="822" cy="222" rx="22" ry="3" fill="#d8ffec" opacity=".4"/>
 </g>
-</g>
-<use href="#note" class="note" style="animation-delay:0s" x="790" y="120"/>
-<use href="#note" class="note" style="animation-delay:1.4s" x="820" y="120"/>
-<use href="#note" class="note" style="animation-delay:2.6s" x="766" y="120"/>
+<use href="#note" class="note" style="animation-delay:0s" x="800" y="134"/>
+<use href="#note" class="note" style="animation-delay:1.4s" x="830" y="134"/>
+<use href="#note" class="note" style="animation-delay:2.6s" x="776" y="134"/>
 
 </svg>

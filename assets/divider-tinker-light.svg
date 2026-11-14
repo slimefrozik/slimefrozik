@@ -1,18 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 48" width="100%" height="48" role="img" aria-label="WHAT I TINKER WITH">
-<defs>
-  <linearGradient id="lL" x1="0" x2="1"><stop offset="0" stop-color="#0969da" stop-opacity="0"/><stop offset="1" stop-color="#0969da" stop-opacity=".7"/></linearGradient>
-  <linearGradient id="lR" x1="0" x2="1"><stop offset="0" stop-color="#0969da" stop-opacity=".7"/><stop offset="1" stop-color="#0969da" stop-opacity="0"/></linearGradient>
-</defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 56" width="100%" height="56" role="img" aria-label="WHAT I TINKER WITH">
 <style><![CDATA[
-@keyframes runL{0%{transform:translateX(0);opacity:0}15%,85%{opacity:1}100%{transform:translateX(256px);opacity:0}}
-@keyframes runR{0%{transform:translateX(0);opacity:0}15%,85%{opacity:1}100%{transform:translateX(-256px);opacity:0}}
+.dp{transform-box:fill-box;transform-origin:50% 0%;animation:dripS 5s ease-in-out infinite}
+.dd{animation:dropF 5s ease-in infinite;opacity:0}
+@keyframes dripS{0%,100%{transform:scaleY(.6)}55%{transform:scaleY(1.12)}}
+@keyframes dropF{0%,52%{opacity:0;transform:translateY(0)}58%{opacity:.9}100%{opacity:0;transform:translateY(26px)}}
+
 @keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
-.l{animation:runL 3.6s ease-in-out infinite} .r{animation:runR 3.6s ease-in-out infinite}
 .s{transform-box:fill-box;transform-origin:50% 50%;animation:beat 2.4s ease-in-out infinite}
 ]]></style>
-<rect x="50" y="23" width="256" height="2" rx="1" fill="url(#lL)"/>
-<rect x="594" y="23" width="256" height="2" rx="1" fill="url(#lR)"/>
-<circle class="l" cx="50" cy="24" r="3.5" fill="#0969da"/>
-<circle class="r" cx="850" cy="24" r="3.5" fill="#0969da"/>
-<text x="450" y="30" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','Cascadia Code',Consolas,'DejaVu Sans Mono',monospace" font-size="15" font-weight="700" letter-spacing="2.2" fill="#1f2328"><tspan class="s" font-family="'Segoe UI Symbol','Apple Symbols','DejaVu Sans',sans-serif" fill="#0969da" font-size="19">♣</tspan>  WHAT I TINKER WITH</text>
+<rect x="40" y="18" width="258" height="5" rx="2.5" fill="#2da44e"/><rect x="46" y="19" width="246" height="1.5" rx=".75" fill="#fff" opacity=".5"/><g class="dp" style="animation-delay:-0.90s"><rect x="77.0" y="19" width="6.0" height="12" rx="3.0" fill="#2da44e"/><circle cx="80" cy="30" r="4.6" fill="#2da44e"/><rect x="78.2" y="22" width="1.7" height="7" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-0.90s" cx="80" cy="39" r="2.3" fill="#2da44e"/><g class="dp" style="animation-delay:-2.27s"><rect x="137.0" y="19" width="6.0" height="20" rx="3.0" fill="#2da44e"/><circle cx="140" cy="38" r="4.6" fill="#2da44e"/><rect x="138.2" y="22" width="1.7" height="15" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-2.27s" cx="140" cy="47" r="2.3" fill="#2da44e"/><g class="dp" style="animation-delay:-3.64s"><rect x="202.0" y="19" width="6.0" height="14" rx="3.0" fill="#2da44e"/><circle cx="205" cy="32" r="4.6" fill="#2da44e"/><rect x="203.2" y="22" width="1.7" height="9" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-3.64s" cx="205" cy="41" r="2.3" fill="#2da44e"/><g class="dp" style="animation-delay:-0.01s"><rect x="259.0" y="19" width="6.0" height="22" rx="3.0" fill="#2da44e"/><circle cx="262" cy="40" r="4.6" fill="#2da44e"/><rect x="260.2" y="22" width="1.7" height="17" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-0.01s" cx="262" cy="49" r="2.3" fill="#2da44e"/>
+<rect x="602" y="18" width="258" height="5" rx="2.5" fill="#2da44e"/><rect x="608" y="19" width="246" height="1.5" rx=".75" fill="#fff" opacity=".5"/><g class="dp" style="animation-delay:-2.70s"><rect x="651.0" y="19" width="6.0" height="14" rx="3.0" fill="#2da44e"/><circle cx="654" cy="32" r="4.6" fill="#2da44e"/><rect x="652.2" y="22" width="1.7" height="9" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-2.70s" cx="654" cy="41" r="2.3" fill="#2da44e"/><g class="dp" style="animation-delay:-4.07s"><rect x="711.0" y="19" width="6.0" height="22" rx="3.0" fill="#2da44e"/><circle cx="714" cy="40" r="4.6" fill="#2da44e"/><rect x="712.2" y="22" width="1.7" height="17" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-4.07s" cx="714" cy="49" r="2.3" fill="#2da44e"/><g class="dp" style="animation-delay:-0.44s"><rect x="771.0" y="19" width="6.0" height="12" rx="3.0" fill="#2da44e"/><circle cx="774" cy="30" r="4.6" fill="#2da44e"/><rect x="772.2" y="22" width="1.7" height="7" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-0.44s" cx="774" cy="39" r="2.3" fill="#2da44e"/><g class="dp" style="animation-delay:-1.81s"><rect x="841.0" y="19" width="6.0" height="20" rx="3.0" fill="#2da44e"/><circle cx="844" cy="38" r="4.6" fill="#2da44e"/><rect x="842.2" y="22" width="1.7" height="15" rx=".85" fill="#fff" opacity=".45"/></g><circle class="dd" style="animation-delay:-1.81s" cx="844" cy="47" r="2.3" fill="#2da44e"/>
+<text x="450" y="26" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','Cascadia Code',Consolas,'DejaVu Sans Mono',monospace" font-size="15" font-weight="700" letter-spacing="2.2" fill="#1f2328"><tspan class="s" font-family="'Segoe UI Symbol','Apple Symbols','DejaVu Sans',sans-serif" fill="#2da44e" font-size="19">♣</tspan>  WHAT I TINKER WITH</text>
 </svg>

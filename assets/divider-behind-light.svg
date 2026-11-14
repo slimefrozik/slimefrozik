@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 48" width="100%" height="48" role="img" aria-label="BEHIND THE SCENES">
+<defs>
+  <linearGradient id="lL" x1="0" x2="1"><stop offset="0" stop-color="#cf222e" stop-opacity="0"/><stop offset="1" stop-color="#cf222e" stop-opacity=".7"/></linearGradient>
+  <linearGradient id="lR" x1="0" x2="1"><stop offset="0" stop-color="#cf222e" stop-opacity=".7"/><stop offset="1" stop-color="#cf222e" stop-opacity="0"/></linearGradient>
+</defs>
+<style><![CDATA[
+@keyframes runL{0%{transform:translateX(0);opacity:0}15%,85%{opacity:1}100%{transform:translateX(262px);opacity:0}}
+@keyframes runR{0%{transform:translateX(0);opacity:0}15%,85%{opacity:1}100%{transform:translateX(-262px);opacity:0}}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+.l{animation:runL 3.6s ease-in-out infinite} .r{animation:runR 3.6s ease-in-out infinite}
+.s{transform-box:fill-box;transform-origin:50% 50%;animation:beat 2.4s ease-in-out infinite}
+]]></style>
+<rect x="50" y="23" width="262" height="2" rx="1" fill="url(#lL)"/>
+<rect x="588" y="23" width="262" height="2" rx="1" fill="url(#lR)"/>
+<circle class="l" cx="50" cy="24" r="3.5" fill="#cf222e"/>
+<circle class="r" cx="850" cy="24" r="3.5" fill="#cf222e"/>
+<text x="450" y="30" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','Cascadia Code',Consolas,'DejaVu Sans Mono',monospace" font-size="15" font-weight="700" letter-spacing="2.2" fill="#1f2328"><tspan class="s" font-family="'Segoe UI Symbol','Apple Symbols','DejaVu Sans',sans-serif" fill="#cf222e" font-size="19">♥</tspan>  BEHIND THE SCENES</text>
+</svg>

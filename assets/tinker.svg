@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 180" width="100%" height="180" role="img" aria-label="What I tinker with: browser extensions and web tools, game modding (Minecraft plugins, Terraria mods), vibecoding with LLMs">
+<style><![CDATA[
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes pop{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
+@keyframes bl{0%,49%{opacity:1}50%,100%{opacity:0}}
+@keyframes tw{0%,100%{transform:scale(.6) rotate(0);opacity:.6}50%{transform:scale(1.1) rotate(20deg);opacity:1}}
+.fl{animation:fl 3.2s ease-in-out infinite}
+.pop{transform-box:fill-box;transform-origin:50% 50%;animation:pop 2s ease-in-out infinite}
+.blink{animation:bl 1s infinite}
+.tw{transform-box:fill-box;transform-origin:50% 50%;animation:tw 2.4s ease-in-out infinite}
+]]></style>
+<g transform="translate(9,3)">
+  <rect width="288" height="174" rx="16" fill="#0d1117" stroke="#30363d"/>
+  <rect x="26" y="0" width="56" height="3" rx="1.5" fill="#79c0ff"/>
+  <rect width="288" height="174" rx="16" fill="#79c0ff" fill-opacity=".035"/>
+  <g transform="translate(26,26)"><g class="fl"><rect x="0" y="6" width="50" height="38" rx="7" fill="none" stroke="#79c0ff" stroke-width="2.4"/>
+      <line x1="0" y1="17" x2="50" y2="17" stroke="#79c0ff" stroke-width="2.4"/>
+      <circle cx="8" cy="11.5" r="1.8" fill="#79c0ff"/><circle cx="15" cy="11.5" r="1.8" fill="#79c0ff"/>
+      <rect x="30" y="26" width="12" height="12" rx="3" fill="#56d364" class="pop"/>
+      <rect x="9" y="26" width="14" height="4" rx="2" fill="#79c0ff" opacity=".5"/><rect x="9" y="33" width="10" height="4" rx="2" fill="#79c0ff" opacity=".3"/></g></g>
+  <text x="96" y="46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="16.5" font-weight="700" fill="#f0f6fc">Browser Extensions</text>
+  <text x="96" y="66" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#79c0ff">&amp; Web Tools</text>
+  <text y="112" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9198a1"><tspan x="26" dy="0">Audio stream extraction,</tspan><tspan x="26" dy="19">clean UI injection,</tspan><tspan x="26" dy="19">automating mundane web tasks.</tspan></text>
+</g>
+<g transform="translate(306,3)">
+  <rect width="288" height="174" rx="16" fill="#0d1117" stroke="#30363d"/>
+  <rect x="26" y="0" width="56" height="3" rx="1.5" fill="#56d364"/>
+  <rect width="288" height="174" rx="16" fill="#56d364" fill-opacity=".035"/>
+  <g transform="translate(26,26)"><g class="fl" style="animation-delay:-1s"><polygon points="25,2 49,15 25,28 1,15" fill="#7ee787"/>
+      <polygon points="1,15 25,28 25,54 1,41" fill="#2ea043"/><polygon points="49,15 25,28 25,54 49,41" fill="#196c2e"/>
+      <polygon points="25,2 49,15 25,28 1,15" fill="none" stroke="#b6ffc4" stroke-opacity=".6"/>
+      <rect x="9" y="30" width="6" height="6" fill="#0d3f1a" opacity=".55" transform="skewY(30) translate(0,-4)"/></g></g>
+  <text x="96" y="46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="16.5" font-weight="700" fill="#f0f6fc">Game Modding</text>
+  <text x="96" y="66" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#56d364">&amp; Mechanics</text>
+  <text y="112" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9198a1"><tspan x="26" dy="0">Minecraft server plugins,</tspan><tspan x="26" dy="19">Terraria mods,</tspan><tspan x="26" dy="19">and game prototypes.</tspan></text>
+</g>
+<g transform="translate(603,3)">
+  <rect width="288" height="174" rx="16" fill="#0d1117" stroke="#30363d"/>
+  <rect x="26" y="0" width="56" height="3" rx="1.5" fill="#d2a8ff"/>
+  <rect width="288" height="174" rx="16" fill="#d2a8ff" fill-opacity=".035"/>
+  <g transform="translate(26,26)"><g class="fl" style="animation-delay:-2s"><rect x="0" y="6" width="50" height="40" rx="10" fill="none" stroke="#d2a8ff" stroke-width="2.4"/>
+      <path d="M12 20 L22 27 L12 34" stroke="#d2a8ff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="26" y1="35" x2="38" y2="35" stroke="#d2a8ff" stroke-width="3" stroke-linecap="round" class="blink"/>
+      <path class="tw" d="M46 -2 Q47.5 5.5 55 7 Q47.5 8.5 46 16 Q44.5 8.5 37 7 Q44.5 5.5 46 -2Z" fill="#ffa657"/></g></g>
+  <text x="96" y="46" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="16.5" font-weight="700" fill="#f0f6fc">Vibecoding</text>
+  <text x="96" y="66" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#d2a8ff">with LLMs</text>
+  <text y="112" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#9198a1"><tspan x="26" dy="0">Prompting modern LLMs to craft</tspan><tspan x="26" dy="19">scripts, utilities and tools</tspan><tspan x="26" dy="19">for everyday use.</tspan></text>
+</g>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 170" width="100%" height="170" role="img" aria-label="slimefrozik — just building things that work">
+<defs>
+
+  <linearGradient id="jelly" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9ffe3"/><stop offset=".42" stop-color="#6aeaa8"/><stop offset="1" stop-color="#22a96c"/></linearGradient>
+  <radialGradient id="sfloor" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#6aeaa8" stop-opacity=".55"/><stop offset=".7" stop-color="#238636" stop-opacity=".12"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+  <radialGradient id="sbub" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".5" stop-color="#d4ffe8" stop-opacity=".35"/><stop offset="1" stop-color="#6aeaa8" stop-opacity=".1"/></radialGradient>
+  <clipPath id="jellyClip"><rect x="8" y="16" width="104" height="92" rx="32"/></clipPath>
+
+  <linearGradient id="w1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3eb856" stop-opacity=".55"/><stop offset="1" stop-color="#145324" stop-opacity=".15"/></linearGradient>
+  <linearGradient id="w2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7ee787" stop-opacity=".35"/><stop offset="1" stop-color="#238636" stop-opacity=".08"/></linearGradient>
+</defs>
+<style><![CDATA[
+
+.look{animation:look 6s ease-in-out infinite}
+.mouth{transform-box:fill-box;transform-origin:50% 0%;animation:mouth 2.8s ease-in-out infinite}
+.brow{animation:brow 4.2s ease-in-out infinite}
+.sb{animation:sbub 5s ease-in infinite;opacity:0}
+.bgb{animation:bgb 7s ease-in infinite;opacity:0}
+.eqb{transform-box:fill-box;transform-origin:50% 100%;animation:eqb 1s ease-in-out infinite}
+@keyframes eqb{0%,100%{transform:scaleY(.2)}50%{transform:scaleY(1)}}
+@keyframes look{0%,28%,100%{transform:translateX(0)}38%,56%{transform:translateX(-3px)}68%,88%{transform:translateX(3px)}}
+@keyframes mouth{0%,100%{transform:scale(1,1)}12%,28%{transform:scale(.86,1.22)}42%{transform:scale(1.18,.78)}}
+@keyframes brow{0%,40%,100%{transform:translateY(0)}48%,60%{transform:translateY(-2.5px)}}
+@keyframes sbub{0%{transform:translateY(0);opacity:0}20%{opacity:.85}100%{transform:translateY(-38px);opacity:0}}
+@keyframes bgb{0%{transform:translateY(0);opacity:0}15%{opacity:.55}100%{transform:translateY(-130px);opacity:0}}
+
+@keyframes w1{from{transform:translateX(0)}to{transform:translateX(-600px)}}
+@keyframes w2{from{transform:translateX(-300px)}to{transform:translateX(-900px)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes travel{0%{transform:translateX(-70px)}100%{transform:translateX(930px)}}
+@keyframes hop{0%,100%{transform:translateY(0) scale(1.12,.88)}12%{transform:translateY(-24px) scale(.92,1.1)}30%{transform:translateY(-44px) scale(.96,1.04)}50%{transform:translateY(-24px) scale(.94,1.06)}70%{transform:translateY(0) scale(1.16,.84)}82%{transform:translateY(0) scale(1,1)}}
+.w1{animation:w1 9s linear infinite} .w2{animation:w2 13s linear infinite} .b{animation:bob 3s ease-in-out infinite}
+.travel{animation:travel 14s linear infinite}
+.body{transform-box:fill-box;transform-origin:50% 100%;animation:hop 1.4s cubic-bezier(.4,0,.3,1) infinite}
+.eyes{transform-box:fill-box;transform-origin:50% 50%;animation:blinkEye 4.2s infinite}
+@keyframes blinkEye{0%,46%,50%,96%,100%{transform:scaleY(1)}48%,98%{transform:scaleY(.08)}}
+]]></style>
+<g class="b"><text x="450" y="34" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="15.5" font-style="italic" fill="#c9d1d9">“Code is just a tool to solve problems — no matter how it was written.”</text></g>
+<text x="450" y="58" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','Cascadia Code',Consolas,'DejaVu Sans Mono',monospace" font-size="12.5" fill="#6e7681">slimefrozik <tspan fill="#56d364">+</tspan> just building things that work</text>
+<g transform="translate(0,116)"><path class="w2" d="M0,7.0 L10,6.8 L20,6.3 L30,5.5 L40,4.5 L50,3.3 L60,2.0 L70,0.5 L80,-0.9 L90,-2.4 L100,-3.7 L110,-4.8 L120,-5.8 L130,-6.5 L140,-6.9 L150,-7.0 L160,-6.8 L170,-6.3 L180,-5.5 L190,-4.5 L200,-3.3 L210,-2.0 L220,-0.5 L230,0.9 L240,2.4 L250,3.7 L260,4.8 L270,5.8 L280,6.5 L290,6.9 L300,7.0 L310,6.8 L320,6.3 L330,5.5 L340,4.5 L350,3.3 L360,2.0 L370,0.5 L380,-0.9 L390,-2.4 L400,-3.7 L410,-4.8 L420,-5.8 L430,-6.5 L440,-6.9 L450,-7.0 L460,-6.8 L470,-6.3 L480,-5.5 L490,-4.5 L500,-3.3 L510,-2.0 L520,-0.5 L530,0.9 L540,2.4 L550,3.7 L560,4.8 L570,5.8 L580,6.5 L590,6.9 L600,7.0 L610,6.8 L620,6.3 L630,5.5 L640,4.5 L650,3.3 L660,2.0 L670,0.5 L680,-0.9 L690,-2.4 L700,-3.7 L710,-4.8 L720,-5.8 L730,-6.5 L740,-6.9 L750,-7.0 L760,-6.8 L770,-6.3 L780,-5.5 L790,-4.5 L800,-3.3 L810,-2.0 L820,-0.5 L830,0.9 L840,2.4 L850,3.7 L860,4.8 L870,5.8 L880,6.5 L890,6.9 L900,7.0 L910,6.8 L920,6.3 L930,5.5 L940,4.5 L950,3.3 L960,2.0 L970,0.5 L980,-0.9 L990,-2.4 L1000,-3.7 L1010,-4.8 L1020,-5.8 L1030,-6.5 L1040,-6.9 L1050,-7.0 L1060,-6.8 L1070,-6.3 L1080,-5.5 L1090,-4.5 L1100,-3.3 L1110,-2.0 L1120,-0.5 L1130,0.9 L1140,2.4 L1150,3.7 L1160,4.8 L1170,5.8 L1180,6.5 L1190,6.9 L1200,7.0 L1210,6.8 L1220,6.3 L1230,5.5 L1240,4.5 L1250,3.3 L1260,2.0 L1270,0.5 L1280,-0.9 L1290,-2.4 L1300,-3.7 L1310,-4.8 L1320,-5.8 L1330,-6.5 L1340,-6.9 L1350,-7.0 L1360,-6.8 L1370,-6.3 L1380,-5.5 L1390,-4.5 L1400,-3.3 L1410,-2.0 L1420,-0.5 L1430,0.9 L1440,2.4 L1450,3.7 L1460,4.8 L1470,5.8 L1480,6.5 L1490,6.9 L1500,7.0 L1510,6.8 L1520,6.3 L1530,5.5 L1540,4.5 L1550,3.3 L1560,2.0 L1570,0.5 L1580,-0.9 L1590,-2.4 L1600,-3.7 L1610,-4.8 L1620,-5.8 L1630,-6.5 L1640,-6.9 L1650,-7.0 L1660,-6.8 L1670,-6.3 L1680,-5.5 L1690,-4.5 L1700,-3.3 L1710,-2.0 L1720,-0.5 L1730,0.9 L1740,2.4 L1750,3.7 L1760,4.8 L1770,5.8 L1780,6.5 L1790,6.9 L1800,7.0 V80 H0 Z" fill="url(#w2)"/></g>
+<g transform="translate(0,66)"><g class="travel"><g transform="scale(.36)">
+<g class="body">
+  <path d="M12 54 C10 -8 110 -8 108 54" fill="none" stroke="#1b2a3a" stroke-width="7" stroke-linecap="round"/><path d="M12 54 C10 -8 110 -8 108 54" fill="none" stroke="#7ee787" stroke-opacity=".75" stroke-width="1.6" stroke-linecap="round" transform="translate(0,-1.5)"/>
+  <rect x="8" y="16" width="104" height="92" rx="32" fill="url(#jelly)" stroke="#8ff5c0" stroke-width="2.6"/>
+  <g clip-path="url(#jellyClip)">
+    <path d="M8 74 C34 52 62 84 112 44 V110 H8Z" fill="#17986a" opacity=".3"/>
+    <ellipse cx="60" cy="106" rx="46" ry="13" fill="#d8ffec" opacity=".38"/>
+    <g class="sb" style="animation-delay:0s"><circle cx="28" cy="92" r="5" fill="url(#sbub)" stroke="#fff" stroke-opacity=".55" stroke-width=".8"/><circle cx="26.5" cy="90.2" r="1.4" fill="#fff"/></g><g class="sb" style="animation-delay:1.6s"><circle cx="88" cy="88" r="4" fill="url(#sbub)" stroke="#fff" stroke-opacity=".55" stroke-width=".8"/><circle cx="86.8" cy="86.6" r="1.1" fill="#fff"/></g><g class="sb" style="animation-delay:3.1s"><circle cx="70" cy="98" r="3" fill="url(#sbub)" stroke="#fff" stroke-opacity=".55" stroke-width=".8"/><circle cx="69.1" cy="97.0" r="0.8" fill="#fff"/></g><g class="sb" style="animation-delay:2.2s"><circle cx="40" cy="76" r="2.6" fill="url(#sbub)" stroke="#fff" stroke-opacity=".55" stroke-width=".8"/><circle cx="39.2" cy="75.1" r="0.7" fill="#fff"/></g><g class="sb" style="animation-delay:0.8s"><circle cx="96" cy="64" r="3.2" fill="url(#sbub)" stroke="#fff" stroke-opacity=".55" stroke-width=".8"/><circle cx="95.0" cy="62.9" r="0.9" fill="#fff"/></g>
+  </g>
+  <rect x="12" y="20" width="96" height="84" rx="29" fill="none" stroke="#eafff4" stroke-opacity=".5" stroke-width="1.6"/>
+  <path d="M26 28 Q60 20 94 28 Q60 34 26 28Z" fill="#fff" opacity=".72"/>
+  <path d="M20 36 l2.2 6 l6 2.2 l-6 2.2 l-2.2 6 l-2.2 -6 l-6 -2.2 l6 -2.2z" fill="#fff"/>
+  <g class="brow"><path d="M35 46 Q44 40 53 46" stroke="#0f4a35" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M67 46 Q76 40 85 46" stroke="#0f4a35" stroke-width="2.6" fill="none" stroke-linecap="round"/></g>
+  <g class="look"><g class="eyes"><ellipse cx="44" cy="62" rx="9.5" ry="11.8" fill="#0a2a22"/><ellipse cx="44" cy="62" rx="9.5" ry="11.8" fill="none" stroke="#1d6b4f" stroke-width="1.2"/><circle cx="40.8" cy="56.5" r="3.8" fill="#fff"/><circle cx="47.4" cy="67.5" r="1.9" fill="#fff" opacity=".85"/><path d="M47 58 l1 2.6 l2.6 1 l-2.6 1 l-1 2.6 l-1 -2.6 l-2.6 -1 l2.6 -1z" fill="#b6ffe0" opacity=".9" transform="scale(.7) translate(20.2,24.9)"/><ellipse cx="76" cy="62" rx="9.5" ry="11.8" fill="#0a2a22"/><ellipse cx="76" cy="62" rx="9.5" ry="11.8" fill="none" stroke="#1d6b4f" stroke-width="1.2"/><circle cx="72.8" cy="56.5" r="3.8" fill="#fff"/><circle cx="79.4" cy="67.5" r="1.9" fill="#fff" opacity=".85"/><path d="M79 58 l1 2.6 l2.6 1 l-2.6 1 l-1 2.6 l-1 -2.6 l-2.6 -1 l2.6 -1z" fill="#b6ffe0" opacity=".9" transform="scale(.7) translate(34.0,24.9)"/></g></g>
+  <ellipse cx="29" cy="79" rx="6.5" ry="3.4" fill="#ff8fa3" opacity=".65"/><ellipse cx="91" cy="79" rx="6.5" ry="3.4" fill="#ff8fa3" opacity=".65"/>
+  <g class="mouth"><path d="M49 79 Q60 82 71 79 Q69 94 60 94 Q51 94 49 79Z" fill="#0a2a22"/><ellipse cx="60" cy="89.6" rx="5.6" ry="3" fill="#ff8fa3"/></g>
+  <g class="cup"><rect x="1" y="44" width="17" height="36" rx="8.5" fill="#1b2a3a" stroke="#7ee787" stroke-width="1.8"/><rect x="5.5" y="50" width="6" height="24" rx="3" fill="#7ee787" opacity=".4"/><rect x="102" y="44" width="17" height="36" rx="8.5" fill="#1b2a3a" stroke="#7ee787" stroke-width="1.8"/><rect x="108.5" y="50" width="6" height="24" rx="3" fill="#7ee787" opacity=".4"/></g>
+</g></g></g></g>
+<g transform="translate(0,128)"><path class="w1" d="M0,0.0 L10,1.2 L20,2.4 L30,3.5 L40,4.5 L50,5.2 L60,5.7 L70,6.0 L80,6.0 L90,5.7 L100,5.2 L110,4.5 L120,3.5 L130,2.4 L140,1.2 L150,0.0 L160,-1.2 L170,-2.4 L180,-3.5 L190,-4.5 L200,-5.2 L210,-5.7 L220,-6.0 L230,-6.0 L240,-5.7 L250,-5.2 L260,-4.5 L270,-3.5 L280,-2.4 L290,-1.2 L300,-0.0 L310,1.2 L320,2.4 L330,3.5 L340,4.5 L350,5.2 L360,5.7 L370,6.0 L380,6.0 L390,5.7 L400,5.2 L410,4.5 L420,3.5 L430,2.4 L440,1.2 L450,0.0 L460,-1.2 L470,-2.4 L480,-3.5 L490,-4.5 L500,-5.2 L510,-5.7 L520,-6.0 L530,-6.0 L540,-5.7 L550,-5.2 L560,-4.5 L570,-3.5 L580,-2.4 L590,-1.2 L600,-0.0 L610,1.2 L620,2.4 L630,3.5 L640,4.5 L650,5.2 L660,5.7 L670,6.0 L680,6.0 L690,5.7 L700,5.2 L710,4.5 L720,3.5 L730,2.4 L740,1.2 L750,0.0 L760,-1.2 L770,-2.4 L780,-3.5 L790,-4.5 L800,-5.2 L810,-5.7 L820,-6.0 L830,-6.0 L840,-5.7 L850,-5.2 L860,-4.5 L870,-3.5 L880,-2.4 L890,-1.2 L900,-0.0 L910,1.2 L920,2.4 L930,3.5 L940,4.5 L950,5.2 L960,5.7 L970,6.0 L980,6.0 L990,5.7 L1000,5.2 L1010,4.5 L1020,3.5 L1030,2.4 L1040,1.2 L1050,0.0 L1060,-1.2 L1070,-2.4 L1080,-3.5 L1090,-4.5 L1100,-5.2 L1110,-5.7 L1120,-6.0 L1130,-6.0 L1140,-5.7 L1150,-5.2 L1160,-4.5 L1170,-3.5 L1180,-2.4 L1190,-1.2 L1200,-0.0 L1210,1.2 L1220,2.4 L1230,3.5 L1240,4.5 L1250,5.2 L1260,5.7 L1270,6.0 L1280,6.0 L1290,5.7 L1300,5.2 L1310,4.5 L1320,3.5 L1330,2.4 L1340,1.2 L1350,0.0 L1360,-1.2 L1370,-2.4 L1380,-3.5 L1390,-4.5 L1400,-5.2 L1410,-5.7 L1420,-6.0 L1430,-6.0 L1440,-5.7 L1450,-5.2 L1460,-4.5 L1470,-3.5 L1480,-2.4 L1490,-1.2 L1500,-0.0 L1510,1.2 L1520,2.4 L1530,3.5 L1540,4.5 L1550,5.2 L1560,5.7 L1570,6.0 L1580,6.0 L1590,5.7 L1600,5.2 L1610,4.5 L1620,3.5 L1630,2.4 L1640,1.2 L1650,0.0 L1660,-1.2 L1670,-2.4 L1680,-3.5 L1690,-4.5 L1700,-5.2 L1710,-5.7 L1720,-6.0 L1730,-6.0 L1740,-5.7 L1750,-5.2 L1760,-4.5 L1770,-3.5 L1780,-2.4 L1790,-1.2 L1800,-0.0 V80 H0 Z" fill="url(#w1)"/></g>
+</svg>

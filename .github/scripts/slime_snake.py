@@ -65,16 +65,64 @@ def levels_for(weeks):
     return lambda v: 0 if v == 0 else 1 + sum(v > t for t in q)
 
 
-def gel_strip(x0, x1, y, color, drips, th=7, k=1.35):
-    out = f'<rect x="{x0}" y="{y}" width="{x1-x0}" height="{th}" rx="{th/2}" fill="{color}"/>'
-    out += f'<rect x="{x0+6}" y="{y+1.2}" width="{x1-x0-12}" height="1.6" rx=".8" fill="#fff" opacity=".5"/>'
+_gel_n = [0]
+
+def _mix(h, o, t):
+    h, o = h.lstrip('#'), o.lstrip('#')
+    a = [int(h[i:i+2], 16) for i in (0, 2, 4)]
+    b = [int(o[i:i+2], 16) for i in (0, 2, 4)]
+    return '#%02x%02x%02x' % tuple(round(x + (y - x) * t) for x, y in zip(a, b))
+
+def gel_strip(x0, x1, y, color, drips, th=5, seed=0, hl=True, k=1.0, free=False):
+    """Organic gooey edge: wavy mass + smooth teardrop drips (fillet root, neck, bulb) + falling drops."""
+    _gel_n[0] += 1
+    n = _gel_n[0]
+    T = th * 1.4 + 3
+    wob = lambda x: 1 + .16 * math.sin(x / 23 + seed * 1.3) + .09 * math.sin(x / 8.5 + seed * 2.1)
+    def taper(x):
+        e = 30 if free else 12
+        u = max(0, min(1, min(x - x0, x1 - x) / e))
+        return math.sqrt(u * (2 - u))
+    bot = lambda x: y + (T * wob(x) * taper(x)) / (2 if free else 1)
+    top = lambda x: (y - (T * wob(x + 13) * taper(x)) / 2) if free else y
+    xs = list(range(int(x0), int(x1), 4)) + [x1]
+    mass = ("M" + " L".join(f"{x:.1f} {top(x):.2f}" for x in xs) + " L" +
+            " L".join(f"{x:.1f} {bot(x):.2f}" for x in reversed(xs)) + " Z")
+    rw, nw, br = 10 * k, 3.3 * k, 5.4 * k
+    body, drops, ymax = "", "", y + T
     for i, (x, L) in enumerate(drips):
-        d = (i * 1.37) % 5
-        out += (f'<g class="dp" style="animation-delay:-{d:.2f}s"><rect x="{x-3*k:.1f}" y="{y+1}" width="{6*k:.1f}" height="{L}" rx="{3*k:.1f}" fill="{color}"/>'
-                f'<circle cx="{x}" cy="{y+L}" r="{4.6*k:.1f}" fill="{color}"/>'
-                f'<rect x="{x-1.8*k:.1f}" y="{y+4}" width="2.2" height="{max(L-5, 2)}" rx="1.1" fill="#fff" opacity=".45"/></g>'
-                f'<circle class="dd" style="animation-delay:-{d:.2f}s" cx="{x}" cy="{y+L+9}" r="2.3" fill="{color}"/>')
-    return out
+        if taper(x) < .9 or x < x0 + rw or x > x1 - rw:
+            continue
+        L = max(L, br * 2 + 6)
+        yb = bot(x) - 1
+        d = (f"M{x-rw:.1f} {yb-6:.1f} L{x-rw:.1f} {yb:.1f} "
+             f"C{x-rw*.55:.1f} {yb+2:.1f} {x-nw:.1f} {yb+L*.2:.1f} {x-nw:.1f} {yb+L*.42:.1f} "
+             f"C{x-nw:.1f} {yb+L*.62:.1f} {x-br:.1f} {yb+L-br*2.3:.1f} {x-br:.1f} {yb+L-br:.1f} "
+             f"A{br:.1f} {br:.1f} 0 0 0 {x+br:.1f} {yb+L-br:.1f} "
+             f"C{x+br:.1f} {yb+L-br*2.3:.1f} {x+nw:.1f} {yb+L*.62:.1f} {x+nw:.1f} {yb+L*.42:.1f} "
+             f"C{x+nw:.1f} {yb+L*.2:.1f} {x+rw*.55:.1f} {yb+2:.1f} {x+rw:.1f} {yb:.1f} "
+             f"L{x+rw:.1f} {yb-6:.1f} Z")
+        dl = (i * 1.37 + seed * 0.9) % 5
+        body += (f'<g class="dp" style="animation-delay:-{dl:.2f}s"><path d="{d}" fill="url(#gg{n})"/>'
+                 f'<path d="M{x-nw+1:.1f} {yb+5:.1f} V{yb+L-br*1.9:.1f}" stroke="#fff" stroke-opacity=".32" stroke-width="1.2" stroke-linecap="round" fill="none"/>'
+                 f'<ellipse cx="{x-br*.38:.1f}" cy="{yb+L-br*1.1:.1f}" rx="{1.5*k:.1f}" ry="{2.3*k:.1f}" fill="#fff" opacity=".7"/></g>')
+        drops += (f'<g transform="translate({x},{yb+L+3:.1f})"><path class="dd" style="animation-delay:-{dl:.2f}s" '
+                  f'd="M0 -5 C2 -2 3 0 3 2 A3 3 0 0 1 -3 2 C-3 0 -2 -2 0 -5Z" fill="{color}"/></g>')
+        ymax = max(ymax, yb + L + 3)
+    shine = ""
+    if hl:
+        pts = [x for x in xs if x0 + 22 <= x <= x1 - 22]
+        if len(pts) > 1:
+            off = 2.2
+            shine = ("<path d=\"M" + " L".join(f"{x:.1f} {top(x)+off:.2f}" for x in pts) +
+                     "\" fill=\"none\" stroke=\"#fff\" stroke-opacity=\".5\" stroke-width=\"1.6\" stroke-linecap=\"round\"/>")
+    ytop = min(top(x) for x in xs)
+    defs = (f'<defs><linearGradient id="gg{n}" gradientUnits="userSpaceOnUse" x1="0" y1="{ytop:.1f}" x2="0" y2="{ymax:.1f}">'
+            f'<stop offset="0" stop-color="{_mix(color, "#ffffff", .55)}"/><stop offset=".22" stop-color="{_mix(color, "#ffffff", .18)}"/>'
+            f'<stop offset=".55" stop-color="{color}"/><stop offset="1" stop-color="{_mix(color, "#000000", .32)}"/></linearGradient>'
+            f'<filter id="gf{n}" x="-4%" y="-90%" width="108%" height="300%"><feDropShadow dx="0" dy="2" stdDeviation="2.4" flood-color="{color}" flood-opacity=".42"/></filter></defs>')
+    return f'{defs}<g filter="url(#gf{n})"><path d="{mass}" fill="url(#gg{n})"/>{body}{shine}</g>{drops}'
+
 
 
 def render(weeks, total, theme):
@@ -135,7 +183,7 @@ def render(weeks, total, theme):
     legend = (f'<text x="{xs[0]-8}" y="{GY+7*P+22}" text-anchor="end" font-family="{MONO}" font-size="10.5" fill="{t["sub"]}">Less</text>'
               + "".join(f'<rect x="{x:.1f}" y="{GY+7*P+13}" width="11" height="11" rx="3" fill="{t["levels"][i]}"/>' for i, x in enumerate(xs))
               + f'<text x="{xs[-1]+19}" y="{GY+7*P+22}" font-family="{MONO}" font-size="10.5" fill="{t["sub"]}">More</text>')
-    strip = gel_strip(18, W - 18, 4, t["gel"], [(430, 16), (520, 26), (610, 14), (700, 22), (790, 14)])
+    strip = gel_strip(18, W - 18, 3, t["gel"], [(430, 20), (520, 30), (610, 18), (700, 26), (790, 18)], th=5, k=1.15)
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 {W} {H}" width="100%" height="{H}" role="img" aria-label="Slime snake eating the GitHub contribution graph: {lab}">
 <defs>

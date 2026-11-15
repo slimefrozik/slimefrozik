@@ -1,0 +1,36 @@
+name: Generate slime snake
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"      # every 12 hours
+  workflow_dispatch:             # manual run: Actions -> Generate slime snake -> Run workflow
+  push:
+    branches: [main]
+    paths:
+      - ".github/scripts/slime_snake.py"
+      - ".github/workflows/slime-snake.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Render slime snake SVGs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 .github/scripts/slime_snake.py --user "${{ github.repository_owner }}" --out /tmp/snake
+
+      - name: Publish to the "output" branch
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan output
+          git rm -rf --quiet .
+          cp /tmp/snake/*.svg .
+          git add ./*.svg
+          git commit -m "Generate slime snake"
+          git push -f origin output

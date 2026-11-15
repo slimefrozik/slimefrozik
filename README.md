@@ -1,30 +1,40 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/header.svg?v=8" width="100%" alt="slimefrozik terminal" />
+<img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/header.svg?v=9" width="100%" alt="slimefrozik terminal" />
 
 </div>
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/divider-projects-light.svg?v=8">
-  <img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/divider-projects.svg?v=8" width="100%" alt="Projects & Tools" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/divider-projects-light.svg?v=9">
+  <img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/divider-projects.svg?v=9" width="100%" alt="Projects & Tools" />
 </picture>
 
 <a href="https://github.com/slimefrozik/VKMusicSaver">
-  <img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/project-card.svg?v=8" width="100%" alt="VKMusicSaver — Firefox extension: clean, lightweight, high-bitrate music from VK without ads, suspicious extensions, or bloated converters. AMO-compliant." />
+  <img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/project-card.svg?v=9" width="100%" alt="VKMusicSaver — Firefox extension: clean, lightweight, high-bitrate music from VK without ads, suspicious extensions, or bloated converters. AMO-compliant." />
 </a>
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/divider-tinker-light.svg?v=8">
-  <img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/divider-tinker.svg?v=8" width="100%" alt="What I tinker with" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/divider-tinker-light.svg?v=9">
+  <img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/divider-tinker.svg?v=9" width="100%" alt="What I tinker with" />
 </picture>
 
-<img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/tinker.svg?v=8" width="100%" alt="Browser extensions & web tools (audio stream extraction, clean UI injection, automating mundane web tasks). Game modding & mechanics (Minecraft server plugins, Terraria mods, game prototypes). Vibecoding (prompting modern LLMs to craft scripts, utilities and tools for everyday use)." />
+<img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/tinker.svg?v=9" width="100%" alt="Browser extensions & web tools (audio stream extraction, clean UI injection, automating mundane web tasks). Game modding & mechanics (Minecraft server plugins, Terraria mods, game prototypes). Vibecoding (prompting modern LLMs to craft scripts, utilities and tools for everyday use)." />
 
-<img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/ticker.svg?v=8" width="100%" alt="Browser extensions · audio stream extraction · clean UI injection · web automation · Minecraft plugins · Terraria mods · game prototypes · vibecoding · LLM prompting" />
+<img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/ticker.svg?v=9" width="100%" alt="Browser extensions · audio stream extraction · clean UI injection · web automation · Minecraft plugins · Terraria mods · game prototypes · vibecoding · LLM prompting" />
 
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/divider-behind-light.svg?v=8">
-  <img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/divider-behind.svg?v=8" width="100%" alt="Behind the scenes" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/divider-snake-light.svg?v=9">
+  <img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/divider-snake.svg?v=9" width="100%" alt="Contributions" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/slimefrozik/slimefrozik/output/slime-snake-light.svg">
+  <img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/output/slime-snake.svg" width="100%" alt="Slime snake eating my contribution graph" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/divider-behind-light.svg?v=9">
+  <img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/divider-behind.svg?v=9" width="100%" alt="Behind the scenes" />
 </picture>
 
 <details>
@@ -41,12 +51,6 @@ rule_of_thumb: "Code is just a tool to solve problems — no matter how it was w
 </details>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/slimefrozik/slimefrozik/output/github-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/slimefrozik/slimefrozik/output/github-snake.svg">
-  <img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/output/github-snake-dark.svg" width="100%" alt="Slime snake eating GitHub contributions" />
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/footer-light.svg?v=8">
-  <img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/footer.svg?v=8" width="100%" alt="slimefrozik + just building things that work" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/footer-light.svg?v=9">
+  <img src="https://raw.githubusercontent.com/slimefrozik/slimefrozik/main/assets/footer.svg?v=9" width="100%" alt="slimefrozik + just building things that work" />
 </picture>
